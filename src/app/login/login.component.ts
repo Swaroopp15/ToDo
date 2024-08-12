@@ -35,6 +35,7 @@ export class LoginComponent {
           else alert('login failed!');
       }).catch((err: any) => {
         console.log(err);
+        alert('Incorrect Details..!')
       })
     }
   }

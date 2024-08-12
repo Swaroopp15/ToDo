@@ -26,6 +26,7 @@ export class RegisterComponent {
           console.log(res);
         }).catch((err: any) => {
           console.log(err);
+          alert('Register Failed..!')
         })
     }
   }

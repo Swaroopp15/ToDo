@@ -1,11 +1,18 @@
-<div
-    class=" z-20 inset-x-0 top-0 bg-blue-600 h-24 w-full text-center fixed shadow-xl flex items-center justify-center text-5xl text-white font-extrabold leading-none tracking-tight">
-    TASK LIST</div>
+<div class="bg-gray-900 min-h-screen flex flex-col">
+    
+    <div class="z-20 inset-x-0 top-0 bg-gray-800 h-24 w-full text-center fixed shadow-xl flex items-center justify-center text-4xl text-white font-bold leading-none tracking-tight">
+      TASK LIST
+    </div>
+  
+    <div class="pt-24 pb-24 flex-1">
 
-    <button routerLink="/newtasktable" class="z-20 fixed bottom-4 right-4 h-24 aspect-square bg-blue-500 rounded hover:text-blue-500 hover:bg-white hover:shadow-gray-500 shadow-2xl shadow-gray-500 active:bg-blue-500 active:text-white text-5xl text-center tracking-tight text-white font-extrabold leading-4">+</button>
-
-<div *ngIf="tasks.length >= 1" class="flex-col inset-y-16 inset-x-32 mt-24">
-    @for (task of tasks; track task) {
-    <app-task [val]="task" (delete)="deletetaskcard(task.taskid)"></app-task>
-    }
-</div>
+      <button routerLink="/newtasktable" class="z-20 fixed bottom-4 right-4 h-20 w-20 bg-yellow-500 rounded-full hover:bg-yellow-600 hover:shadow-lg shadow-2xl text-4xl text-center text-black font-bold leading-none">
+        +
+      </button>
+  
+      <div *ngIf="tasks.length >= 1" class="m-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-32">
+        <app-task *ngFor="let task of tasks" [val]="task" (delete)="deletetaskcard(task.taskid)"></app-task>
+      </div>
+    </div>
+  </div>
+  

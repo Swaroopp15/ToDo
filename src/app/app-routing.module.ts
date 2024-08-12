@@ -10,10 +10,12 @@ import { UpdatetableComponent } from './updatetable/updatetable.component';
 //import { DesktopComponent } from './desktop/desktop.component';
 import { isAuthGuard } from './is-auth.guard';
 import { LoadspinnerComponent } from './loadspinner/loadspinner.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent},
+  // { path: '', component: LoginComponent},
+  { path:'', component:WelcomeComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'task', component: TaskComponent,canActivate:[isAuthGuard]},

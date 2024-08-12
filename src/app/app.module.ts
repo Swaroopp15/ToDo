@@ -12,6 +12,7 @@ import { TasklistComponent } from './tasklist/tasklist.component';
 import { NewtasktableComponent } from './newtasktable/newtasktable.component';
 import { UpdatetableComponent } from './updatetable/updatetable.component';
 import { LoadspinnerComponent } from './loadspinner/loadspinner.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoadspinnerComponent } from './loadspinner/loadspinner.component';
     TasklistComponent,
     NewtasktableComponent,
     UpdatetableComponent,
-    LoadspinnerComponent
+    LoadspinnerComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
