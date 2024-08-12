@@ -1,0 +1,33 @@
+<div class="h-screen w-screen overflow-hidden flex justify-center items-center">
+
+  <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="shadow-2xl bg-white grid grid-rows-5 gap-4 px-10 py-10 rounded-lg border-slate-700 border-solid">
+      <h1
+        class="flex justify-center items-center text-center text-blue-400 text-4xl font-extrabold leading-none tracking-tight dark:text-blue-400">
+        LOG IN</h1>
+
+
+      <input
+        class="bg-gray-50 border border-gray-300 rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-56 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        type="mail" name="mail" placeholder="Email id" formControlName="email">
+
+
+      <input
+        class="bg-gray-50 border border-gray-300 rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-56 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        type="password" name="password" placeholder="Password" formControlName="password">
+
+      <button type="submit" [disabled]="!userForm.valid"
+        class="bg-blue-500 text-white block w-56 p-1 rounded hover:bg-blue-600 hover:shadow-md hover:shadow-blue-400 active:bg-sky-300 disabled:bg-gray-400 disabled:opacity-70">LOG
+        IN</button>
+
+
+
+      <u class="flex justify-center items-center text-center text-gray-400" routerLink="/register">Dont have an
+        account?SignUp</u>
+
+    </div>
+
+  </form>
+
+</div>
+<router-outlet></router-outlet>
