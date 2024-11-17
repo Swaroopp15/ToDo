@@ -27,8 +27,7 @@ export class LoginComponent {
       this.auth.login(this.userForm.value.email, this.userForm.value.password)
       .then((res: any) => {
         console.log(res);
-       // localStorage.removeItem('user_id')
-        console.log('before:'+ localStorage.getItem('user_id')) //ghjk
+        console.log('before:'+ localStorage.getItem('user_id'))
         localStorage.setItem('user_id', res.data.user.id);
         console.log('local storage:'+localStorage.getItem('user_id'))
         if(res.error === null)this.router.navigateByUrl('/tasklist');

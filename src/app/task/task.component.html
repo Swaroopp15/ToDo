@@ -1,26 +1,28 @@
-<div class="relative bg-gray-800 rounded-lg border-2 border-gray-600 shadow-lg w-64 h-48 flex flex-col p-4 text-white">
+<div
+    class="grid grid-cols-6 grid-rows-2 bg-gray-800 rounded-lg border-2 border-gray-600 shadow-lg w-full h-24 p-2 text-white">
 
-    <div class="absolute top-2 right-2 flex items-center justify-center w-12 h-12 rounded-full text-lg font-bold text-white bg-yellow-700 border-2 border-yellow-600">
-        {{ val.priority }}
+    <div class="text-white text-xl font-bold capitalize  col-span-4 row-start-1">
+        {{ val.name }}
     </div>
 
-    <div class="hover mt-8">
+    <div class="text-gray-400 mt-2 text-sm font-medium text-ellipsis col-span-4 row-start-2 col-start-1">
+        {{ val.description }}
+    </div>
 
-        <div class="text-white text-xl font-bold mb-2">
-            {{ val.name }}
-        </div>
+    <!-- <div
+        class="col-start-1 row-start-1
+         flex items-center justify-center w-8 h-8 rounded-lg text-md font-bold text-white bg-yellow-700 border-2 border-yellow-600">
+        {{ val.priority }}
+    </div> -->
 
-        <div class="text-gray-400 text-sm font-medium truncate mb-4">
-            {{ val.description }}
-        </div>
+    <div class="text-gray-400 text-xs col-start-6 flex justify-end row-start-1">
+        {{ val.duetime | date:'dd-MM-yyyy' }}
+    </div>
 
-        <div class="text-gray-400 text-xs mb-4">
-            {{ val.duetime | date:'dd-MM-yyyy' }}
-        </div>
-
-        <div class="mt-auto flex justify-end space-x-2">
-            <button (click)="deletetask()" type="button" class="p-2 rounded bg-red-600 hover:bg-red-700 text-white text-xs font-bold">Delete</button>
-            <button (click)="updatetask()" type="button" class="p-2 rounded bg-yellow-500 hover:bg-yellow-600 text-black text-xs font-bold">Update</button>
-        </div>
+    <div class="flex justify-end gap-x-1 p-1 col-span-2 row-start-2">
+        <button (click)="deletetask()" type="button"
+            class="p-2 rounded bg-red-600 hover:bg-red-700 text-white text-xs font-bold">Delete</button>
+        <button (click)="updatetask()" type="button"
+            class="p-2 rounded bg-yellow-500 hover:bg-yellow-600 text-black text-xs font-bold">Update</button>
     </div>
 </div>
